@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    
+/* Primary */
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+/* Neutral */
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+/* Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color:#dee5e7 ;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(4 , 230px);
+    grid-template-rows: 260px 260px ;
+    gap: 20px 20px;
+    grid-template-areas: "no1 no1 no2 no3"
+    "no4 no5 no5 no3";
+}
+section{
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.no1{
+    grid-area: no1;
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 77% top;
+}
+.no2{
+    grid-area: no2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.no3{
+    grid-area: no3;
+    background-color: var(--White);
+}
+.no4{
+    grid-area: no4;
+    background-color: var(--White);
+}
+.no5{
+    grid-area: no5;
+    background-color: var(--Very-dark-blackish-blue);
+}
+/* --------------------- */
+.inner{
+    padding: 1.5rem 1.7rem ;
+}
+.about{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+img{
+    width:2rem;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 1px solid var(--White);
+}
+.inner-about h4{
+    color:var(--White);
+}
+.inner-about h5{
+    color:rgba(255, 255, 255, 0.526);
+}
+.content{
+    padding:1rem 0;
+}
+.content h3{
+    color: var(--White);
+    margin: 0 0 0.7rem 0 ;
+}
+.content p{
+    color: rgba(255, 255, 255, 0.526);
+}
+.no3 h4 , .no4 h4{
+    color: var(--Very-dark-grayish-blue);
+}
+.no3 h5 , .no4 h5{
+    color: var(--Light-gray)
+}
+.no3 h3 , .no4 h3{
+    color: var(--Very-dark-grayish-blue);
+}
+.no3 p , .no4 p{
+    color: hsla(217, 19%, 35%, 0.686);;
+}
+.attribution{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+a{
+    color: var(--Moderate-violet);
+    transition: 1s ;
+    -webkit-transition: 1s ;
+    -moz-transition: 1s ;
+    -ms-transition: 1s ;
+    -o-transition: 1s ;
+}
+a:hover{
+    font-size: 23px;
+    transform: translateY(-70%);
+    -webkit-transform: translateY(-70%);
+    -moz-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    -o-transform: translateY(-70%);
+    color: crimson;
+}
+
+@media (max-width:410px){
+    main{
+        display: grid;
+        grid-template-columns: 150px 150px;
+        grid-template-rows:   repeat(4 , auto) ;
+        gap: 20px 20px;
+        grid-template-areas: "no1 no1"
+        "no2 no2"
+        "no3 no3"
+        "no4 no4"
+        "no5 no5";
+    }
+}
